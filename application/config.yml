@@ -1,0 +1,39 @@
+modules:
+    enabled:
+        - WebDriver:
+            browser: 'chrome'
+            url: 'http://about:blank'
+            host: 10.100.0.1
+            port: 9515
+            wait: 0
+            log_js_errors: true
+            window_size: 1280x1024
+            capabilities:
+                unexpectedAlertBehaviour: 'accept'
+                chromeOptions:
+                    args: [
+                            '--disable-infobars',
+                            '--disable-extensions',
+                            '--disable-plugins',
+                            '--disable-logging',
+                            '--disable-background-networking',
+                            '--disable-cloud-import',
+                            '--disable-component-update',
+                            '--disable-default-apps',
+                            '--disable-gl-drawing-for-tests',
+                            '--disable-popup-blocking',
+                            '--disable-translate',
+                            '--disable-low-res-tiling',
+                            '--disable-ntp-popular-sites',
+                            '--disable-notifications',
+                            '--disable-gpu',
+                            '--disable-accelerated-2d-canvas',
+                            '--disable-accelerated-jpeg-decoding',
+                            '--disable-accelerated-mjpeg-decode',
+                            '--disable-accelerated-video-decode',
+                            '--ignore-certificate-errors',
+                            '--enable-fast-unload',
+                            '--enable-low-end-device-mode',
+                            '--no-default-browser-check',
+                            '--no-sandbox',
+                            '--test-type']

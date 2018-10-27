@@ -1,0 +1,12 @@
+{
+    "name": "wancer/application",
+    "require": {
+        "codeception/codeception": "^2.5"
+    },
+    "scripts": {
+        "run": "./vendor/bin/codecept build && ./vendor/bin/codecept run --steps --html"
+    },
+    "require-dev": {
+        "roave/security-advisories": "dev-master"
+    }
+}

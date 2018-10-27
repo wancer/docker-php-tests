@@ -1,0 +1,21 @@
+version: "2"
+
+services:
+
+  browser:
+    build:
+        context: ./container/browser
+        dockerfile: ./Dockerfile
+    cap_add:
+       - SYS_ADMIN
+
+  executor:
+    build:
+        context: ./container/executor
+        dockerfile: ./Dockerfile
+    environment:
+       -  COMPOSER_ALLOW_SUPERUSER=1 # required to run composer as root user
+    links:
+       - browser
+    volumes:
+       - ./application:/home/app
